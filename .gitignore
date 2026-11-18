@@ -20,3 +20,6 @@ results/
 
 # Upstream gsplat (managed as separate repo: https://github.com/ldphu1/gsplat)
 gsplat_repo/
+
+# Documentation / Internal plans
+docs/
