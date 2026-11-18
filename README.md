@@ -5,13 +5,12 @@
 [![CUDA](https://img.shields.io/badge/CUDA-12.1%20%7C%2012.4-green.svg)](https://developer.nvidia.com/cuda-zone)
 [![Hardware](https://img.shields.io/badge/Tested%20On-RTX%203050%20Laptop%20(4GB)-76b900.svg)](https://www.nvidia.com/en-us/geforce/gaming-laptops/)
 [![gsplat](https://img.shields.io/badge/Rasterizer-gsplat%20v1.4.0+-brightgreen.svg)](https://github.com/nerfstudio-project/gsplat)
-[![Tests](https://img.shields.io/badge/Unit%20Tests-14%2F14%20Passing-success.svg)](./tests/test_training_regressions.py)
 
 An optimized, highly memory-efficient training framework for **3D Gaussian Splatting (3DGS)** designed to run full 30,000-step training directly on budget consumer GPUs with **as low as 4GB VRAM** (e.g. NVIDIA GeForce RTX 3050 Laptop).
 
 ---
 
-## 🚀 Key Highlights & Benchmark Comparison
+## Key Highlights & Benchmark Comparison
 
 Tested on the standard **Tanks & Temples (`truck`)** dataset with full 30,000 iterations:
 
@@ -26,7 +25,7 @@ Tested on the standard **Tanks & Temples (`truck`)** dataset with full 30,000 it
 
 ---
 
-## 🧠 Architectural Pillars
+## Architectural Pillars
 
 ```
                      ┌─────────────────────────────────────────────────────────────┐
@@ -66,7 +65,7 @@ $$S_i = \sum_t \left( \mathbb{I}(i \in V_t) \cdot \sigma(o_i) \cdot \ln(1 + r_i)
 
 ---
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 ### 1. Prerequisites
 - Windows 11 / Linux
@@ -95,7 +94,7 @@ pip install -r gsplat_repo/examples/requirements.txt
 
 ---
 
-## 💻 Usage
+## Usage
 
 ### 1. Train Low-VRAM Model
 ```bash
@@ -135,24 +134,6 @@ python compare_runs.py results/truck_baseline results/truck_low_vram --save_char
 
 ---
 
-## 🧪 Regression Test Suite
-
-All 14 unit tests in `tests/test_training_regressions.py` run on standard Python `unittest`:
-
-```bash
-python -m unittest discover -s tests -v
-```
-
-Tests verify:
-- **Importance Alignment:** Signal hook synchronization across deletions, duplicates, and splits.
-- **Checkpoint Evaluation:** Compressed codebook restoration, shard concatenation, and render equivalence.
-- **Export Parameterization:** Prevention of scale/opacity double-exponentiation in `convert.py`.
-- **Evaluation Logs:** Non-destructive logging in eval-only mode.
-- **Appearance Optimization:** Safe post-activation RGB rendering with `sh_degree=None`.
-- **K-Means Edge Cases:** Robust handling of empty inputs and small cluster counts ($N < K$).
-
----
-
-## 📜 License
+## License
 
 This project is licensed under the Apache 2.0 License. Built on top of [gsplat](https://github.com/nerfstudio-project/gsplat).
