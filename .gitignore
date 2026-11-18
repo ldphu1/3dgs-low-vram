@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+env/
+venv/
+
+# IDEs
+.idea/
+.vscode/
+
+# Datasets and Large Results
+data/
+results/
+*.pt
+*.ply
+*.splat
+
+# Upstream gsplat (managed as separate repo: https://github.com/ldphu1/gsplat)
+gsplat_repo/
