@@ -86,11 +86,15 @@ python -m venv .venv
 
 # Install core PyTorch matching your CUDA version
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+
+# Clone official gsplat repository and install dependencies
+git clone --recursive https://github.com/nerfstudio-project/gsplat.git gsplat_repo
+pip install -e ./gsplat_repo
 pip install -r gsplat_repo/examples/requirements.txt
 ```
 
 > [!NOTE]
-> For Windows 11 users compiling `gsplat` from source with MSVC and CUDA 12.4, use our pre-patched fork with CUB compatibility fixes: [https://github.com/ldphu1/gsplat](https://github.com/ldphu1/gsplat).
+> The rasterization core relies on the official [nerfstudio-project/gsplat](https://github.com/nerfstudio-project/gsplat) repository.
 
 ---
 

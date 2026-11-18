@@ -18,7 +18,7 @@ results/
 *.ply
 *.splat
 
-# Upstream gsplat (managed as separate repo: https://github.com/ldphu1/gsplat)
+# Upstream gsplat (https://github.com/nerfstudio-project/gsplat)
 gsplat_repo/
 
 # Documentation / Internal plans
