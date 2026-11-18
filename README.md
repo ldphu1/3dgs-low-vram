@@ -87,14 +87,14 @@ python -m venv .venv
 # Install core PyTorch matching your CUDA version
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
 
-# Clone official gsplat repository and install dependencies
-git clone --recursive https://github.com/nerfstudio-project/gsplat.git gsplat_repo
+# Clone gsplat (with Windows 11 / CUDA 12.4 MSVC compatibility fixes) and install dependencies
+git clone --recursive https://github.com/ldphu1/gsplat.git gsplat_repo
 pip install -e ./gsplat_repo
 pip install -r gsplat_repo/examples/requirements.txt
 ```
 
 > [!NOTE]
-> The rasterization core relies on the official [nerfstudio-project/gsplat](https://github.com/nerfstudio-project/gsplat) repository.
+> The rasterization core uses our patched fork [ldphu1/gsplat](https://github.com/ldphu1/gsplat) (forked from [nerfstudio-project/gsplat](https://github.com/nerfstudio-project/gsplat)), which includes MSVC compiler and CUB compatibility fixes for Windows 11 with CUDA 12.x.
 
 ---
 
@@ -140,4 +140,4 @@ python compare_runs.py results/truck_baseline results/truck_low_vram --save_char
 
 ## License
 
-This project is licensed under the Apache 2.0 License. Built on top of [gsplat](https://github.com/nerfstudio-project/gsplat).
+This project is licensed under the Apache 2.0 License. Built on top of [gsplat](https://github.com/ldphu1/gsplat) (upstream: [nerfstudio-project/gsplat](https://github.com/nerfstudio-project/gsplat)).
