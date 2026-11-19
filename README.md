@@ -6,7 +6,7 @@
 [![Hardware](https://img.shields.io/badge/Tested%20On-RTX%203050%20Laptop%20(4GB)-76b900.svg)](https://www.nvidia.com/en-us/geforce/gaming-laptops/)
 [![gsplat](https://img.shields.io/badge/Rasterizer-gsplat%20v1.4.0+-brightgreen.svg)](https://github.com/nerfstudio-project/gsplat)
 
-An optimized, highly memory-efficient training framework for **3D Gaussian Splatting (3DGS)** designed to run full 30,000-step training directly on budget consumer GPUs with **as low as 4GB VRAM** (e.g. NVIDIA GeForce RTX 3050 Laptop).
+An optimized, highly memory-efficient training framework for **3D Gaussian Splatting (3DGS)** designed to run full 30,000-step training directly on budget consumer GPUs with **low VRAM** 
 
 ---
 
